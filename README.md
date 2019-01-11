@@ -1,11 +1,11 @@
 # Supreme Adventure TODO
-To-do list web application using full stack - HTML/CSS, jQuery, Node/express, and PostgreSQL
+To-do list web application using a full stack
 
 ## Utilized Technologies
-- `[UI]` HTML/CSS
-- `[Client]` JavaScript with jQuery
-- `[Server]` Node.js with the Express framework
-- `[Database]` PostgreSQL (pg module)
+- `UI` - HTML/CSS
+- `Client` - JavaScript with jQuery
+- `Server` - Node.js with the Express framework
+- `Database` - PostgreSQL (pg module)
 
 ## Setup
 ```bash

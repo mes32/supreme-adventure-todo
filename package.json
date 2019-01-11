@@ -1,0 +1,26 @@
+{
+  "name": "supreme-adventure-todo",
+  "version": "1.0.0",
+  "description": "To-do list web application using a full stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mes32/supreme-adventure-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mes32/supreme-adventure-todo/issues"
+  },
+  "homepage": "https://github.com/mes32/supreme-adventure-todo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "pg": "^7.8.0"
+  }
+}
