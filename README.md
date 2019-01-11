@@ -2,10 +2,10 @@
 To-do list web application using full stack - HTML/CSS, jQuery, Node/express, and PostgreSQL
 
 ## Utilized Technologies
-- HTML/CSS
-- JavaScript with jQuery
-- Node.js with the Express framework
-- PostgreSQL (pg module)
+- [ **User Interface** ] HTML/CSS
+- [ **Client-side** ] JavaScript with jQuery
+- [ **Server-side** ] Node.js with the Express framework
+- [ **Database** ] PostgreSQL (pg module)
 
 ## Setup
 ```bash
