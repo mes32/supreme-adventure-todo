@@ -24,7 +24,7 @@ npm start
 # 5. Application runs locally on PORT 5006
 ```
 
-**See:** (localhost:5006)[http://localhost:5006]
+**See:** [localhost:5006](http://localhost:5006)
 
 ## Evolution
 - **Version 0.0.0**
