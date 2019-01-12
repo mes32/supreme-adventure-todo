@@ -28,4 +28,4 @@ See (http://localhost:5006)[http://localhost:5006]
 ## Evolution?
 
 #### Version 0.0.0
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
+![](docs/images/sample-v0.0.0.png | width=100)
