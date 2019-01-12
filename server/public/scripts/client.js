@@ -57,9 +57,10 @@ function displayTasks(taskList) {
         </tr>
         `);
         $taskRow.data('task-id', task.id);
-        // if (task.completed) {
-            // toggle class 'completed'
-        // }
+        if (task.completed) {
+            $taskRow.toggleClass('completed');
+            $taskRow.find('button.mark-complete-button').attr('disabled', 'disabled');
+        }
         $('#task-list').append($taskRow);
     }
 }

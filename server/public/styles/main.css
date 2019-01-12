@@ -7,5 +7,13 @@ table, th, td {
 }
 
 th, td {
-    padding: 5px 30px;
+  padding: 5px 30px;
+}
+
+tr.completed {
+  background-color: mediumaquamarine;
+}
+
+.completed .mark-complete-button {
+  
 }
