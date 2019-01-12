@@ -1,3 +1,11 @@
-h1 {
-    color: red;
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+    padding: 5px 30px;
 }
