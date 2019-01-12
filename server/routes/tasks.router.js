@@ -31,4 +31,20 @@ router.post('/', (req, res) => {
     });
 });
 
+// Mark a task as completed in the database
+router.put('/:id', (req, res) => {
+    const taskID = req.params.id;
+    const sqlText = `
+    UPDATE "Tasks"
+        SET "completed" = TRUE
+        WHERE "id" = $1;
+    `;
+    pool.query(sqlText, [taskID]).then(function (sqlResult) {
+        res.sendStatus(200);
+    }).catch(function (sqlError) {
+        console.log(`SQL error in /tasks PUT: ${sqlError}`);
+        res.sendStatus(500);
+    });
+});
+
 module.exports = router;

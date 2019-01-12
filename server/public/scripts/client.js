@@ -34,7 +34,17 @@ function addNewTask() {
 
 // Request that the server change the status of a given TO-DO task to completed
 function markTaskComplete() {
-    console.log('pressed markTaskComplete() - doing nothing');
+    const id = $(this).parent().parent().data('task-id');
+    $.ajax({
+        method: 'PUT',
+        url: `/tasks/${id}`
+    }).then(function (taskList) {
+        getTasksFromServer(taskList);
+    }).catch(function (serverError) {
+        const errorMessage = `Could not mark TO-DO task as completed. Server error: ${serverError}`;
+        console.log(errorMessage);
+        alert(errorMessage);
+    });
 }
 
 // Request that the server delete a given TO-DO task
