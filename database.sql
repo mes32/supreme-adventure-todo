@@ -14,9 +14,11 @@ VALUES
     ('Heat mash water to 155 °F'),
     ('Dough in'),
     ('Adjust water chemistry (if needed)'),
-    ('Wait for an hour and a half'),
+    ('Wait for >= hour & a half'),
     ('Heat sparge water'),
-    ('Begin the vorlaüf (sp?) recirculation process');
+    ('Begin the vorlaüf (sp?) (i.e. water recirculation process)');
+
+UPDATE "Tasks" SET "completed" = TRUE WHERE "id" = 4;
 
 -- Insert a new Task
 INSERT INTO "Tasks"

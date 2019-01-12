@@ -16,4 +16,19 @@ router.get('/', (req, res) => {
     });
 });
 
+// Adds a new task into the database
+router.post('/', (req, res) => {
+    const description = req.body.description;
+    const sqlText = `
+    INSERT INTO "Tasks"
+        ("description") VALUES ($1);
+    `;
+    pool.query(sqlText, [description]).then(function (sqlResult) {
+        res.sendStatus(201);
+    }).catch(function (sqlError) {
+        console.log(`SQL error in /tasks POST: ${sqlError}`);
+        res.sendStatus(500);
+    });
+});
+
 module.exports = router;

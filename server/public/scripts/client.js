@@ -15,7 +15,21 @@ function addAllListeners() {
 
 // Request that the server add a new TO-DO task
 function addNewTask() {
-    console.log('pressed addNewTask() - doing nothing');
+    const description = $('#new-task-description').val();
+    if (description) {
+        $.ajax({
+            method: 'POST',
+            url: '/tasks',
+            data: { description: description }
+        }).then(function(responseStatus) {
+            getTasksFromServer();
+            $('#new-task-description').val('');
+        }).catch(function(serverError) {
+            const errorMessage = `Could not add new TO-DO tasks. Server error: ${serverError}`;
+            console.log(errorMessage);
+            alert(errorMessage);
+        });
+    }
 }
 
 // Request that the server change the status of a given TO-DO task to completed
@@ -44,7 +58,6 @@ function getTasksFromServer() {
 
 // Update the DOM to display the list of TO-DO tasks
 function displayTasks(taskList) {
-    console.log(taskList);
     $('#task-list').empty();
     for (let task of taskList) {
         const $taskRow = $(`
