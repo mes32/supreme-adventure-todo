@@ -5,6 +5,19 @@ CREATE TABLE "Tasks" (
     "completed" BOOLEAN NOT NULL DEFAULT FALSE
 );
 
+-- Sample data for "Tasks"
+INSERT INTO "Tasks"
+    ("description")
+VALUES
+    ('Grind grains'),
+    ('Preheat mash tun w/ boiling water'),
+    ('Heat mash water to 155 °F'),
+    ('Dough in'),
+    ('Adjust water chemistry (if needed)'),
+    ('Wait for an hour and a half'),
+    ('Heat sparge water'),
+    ('Begin the vorlaüf (sp?) recirculation process');
+
 -- Insert a new Task
 INSERT INTO "Tasks"
 ("description") VALUES ($1);
@@ -21,16 +34,3 @@ WHERE "id" = $1;
 -- Delete a Task
 DELETE FROM "Tasks"
 WHERE "id" = $1;
-
--- Sample data
-INSERT INTO "Tasks"
-    ("description")
-VALUES
-    ('Grind grains'),
-    ('Preheat mash tun w/ boiling water'),
-    ('Heat mash water to 155 °F'),
-    ('Dough in'),
-    ('Adjust water chemistry (if needed)'),
-    ('Wait for an hour and a half'),
-    ('Heat sparge water'),
-    ('Begin the vorlaüf (sp?) recirculation process');

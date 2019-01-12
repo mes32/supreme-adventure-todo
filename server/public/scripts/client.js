@@ -1,31 +1,29 @@
-// class Task {
-//     constructor(id, description, completed) {
-//         this.id = id;
-//         this.description = description;
-//         this.completed = completed;
-//     }
-// }
 
+// Main function. Runs as soon as page loads.
 $(onReady);
 function onReady() {
     addAllListeners();
     getTasksFromServer();
 }
 
+// Attach all event handlers
 function addAllListeners() {
     $('#add-new-task').on('click', addNewTask);
     $('#task-list').on('click', '.mark-complete-button', markTaskComplete);
     $('#task-list').on('click', '.delete-button', deleteTask);
 }
 
+// Request that the server add a new TO-DO task
 function addNewTask() {
     console.log('pressed addNewTask() - doing nothing');
 }
 
+// Request that the server change the status of a given TO-DO task to completed
 function markTaskComplete() {
     console.log('pressed markTaskComplete() - doing nothing');
 }
 
+// Request that the server delete a given TO-DO task
 function deleteTask() {
     console.log('pressed deleteTask() - doing nothing');
 }
