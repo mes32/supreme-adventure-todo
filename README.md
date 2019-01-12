@@ -1,18 +1,25 @@
-# TO-DO List Application
-To-do list web application using a full stack
+# Supreme Adventure
+To-do list web application
 
-## Utilized Technologies
+## Utilized Web Stack
 - `UI` - HTML/CSS
 - `Client` - JavaScript with jQuery
 - `Server` - Node.js with the Express framework
 - `Database` - PostgreSQL (pg module)
 
-## Setup
+## Requirements
+- Git
+- Fairly new web browser
+- Node and npm
+- PostgreSQL command line utility
+- PostgreSQL GUI application (e.g. Postico)
+
+## Setup and Run
 ```bash
 # 1. Create PostgreSQL database named 'weekend-to-do-app'
 createdb weekend-to-do-app
 
-# 2. Create database using SQL create statement in 'database.sql'. 
+# 2. Create table "Tasks" using SQL create statement in 'database.sql'. 
 # (Optional: initalize database with sample data from 'database.sql')
 
 # 3. Install Node dependencies/libraries using NPM

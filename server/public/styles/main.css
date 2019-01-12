@@ -1,3 +1,13 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+h1, h3 {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -14,6 +24,7 @@ tr.completed {
   background-color: mediumaquamarine;
 }
 
-.completed .mark-complete-button {
-  
+button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
 }
