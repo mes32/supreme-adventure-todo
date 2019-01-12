@@ -23,9 +23,9 @@ npm start
 # 5. Application runs locally on PORT 5006
 ```
 
-See (http://localhost:5006)[http://localhost:5006]
+See (localhost:5006)[localhost:5006]
 
 ## Evolution?
 
 #### Version 0.0.0
-![Sample UI version 0.0.0](https://github.com/mes32/supreme-adventure-todo/tree/master/docs/images/sample-v0.0.0.png | width=100)
+![Screen Shot](docs/images/sample-v0.0.0.png)
