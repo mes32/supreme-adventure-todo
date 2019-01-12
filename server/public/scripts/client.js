@@ -1,10 +1,10 @@
-class Task {
-    constructor(id, description, completed) {
-        this.id = id;
-        this.description = description;
-        this.completed = completed;
-    }
-}
+// class Task {
+//     constructor(id, description, completed) {
+//         this.id = id;
+//         this.description = description;
+//         this.completed = completed;
+//     }
+// }
 
 $(onReady);
 function onReady() {
@@ -30,6 +30,36 @@ function deleteTask() {
     console.log('pressed deleteTask() - doing nothing');
 }
 
+// Request the current list of all TO-DO tasks from the server via GET
 function getTasksFromServer() {
-    console.log('getTasksFromServer() - doing nothing');
+    $.ajax({
+        method: 'GET',
+        url: '/tasks'
+    }).then(function(taskList) {
+        displayTasks(taskList);
+    }).catch(function(serverError) {
+        const errorMessage = `Could not get TO-DO tasks. Server error: ${serverError}`;
+        console.log(errorMessage);
+        alert(errorMessage);
+    });
+}
+
+// Update the DOM to display the list of TO-DO tasks
+function displayTasks(taskList) {
+    console.log(taskList);
+    $('#task-list').empty();
+    for (let task of taskList) {
+        const $taskRow = $(`
+        <tr>
+            <td>${task.description}</td>
+            <td><button class="mark-complete-button">complete</button></td>
+            <td><button class="delete-button">delete</button></td>
+        </tr>
+        `);
+        $taskRow.data('task-id', task.id);
+        // if (task.completed) {
+            // toggle class 'completed'
+        // }
+        $('#task-list').append($taskRow);
+    }
 }
