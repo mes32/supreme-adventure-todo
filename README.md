@@ -12,7 +12,8 @@ To-do list web application using a full stack
 # 1. Create PostgreSQL database named 'weekend-to-do-app'
 createdb weekend-to-do-app
 
-# 2. Create database using SQL create statement in 'database.sql'. (Optional: initalize database with sample data from 'database.sql')
+# 2. Create database using SQL create statement in 'database.sql'. 
+# (Optional: initalize database with sample data from 'database.sql')
 
 # 3. Install Node dependencies/libraries using NPM
 npm install
@@ -23,9 +24,8 @@ npm start
 # 5. Application runs locally on PORT 5006
 ```
 
-See (localhost:5006)[localhost:5006]
+**See:** (localhost:5006)[http://localhost:5006]
 
-## Evolution?
-
-#### Version 0.0.0
+## Evolution
+- **Version 0.0.0**
 ![Screen Shot](docs/images/sample-v0.0.0.png)
