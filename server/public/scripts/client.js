@@ -49,7 +49,17 @@ function markTaskComplete() {
 
 // Request that the server delete a given TO-DO task
 function deleteTask() {
-    console.log('pressed deleteTask() - doing nothing');
+    const id = $(this).parent().parent().data('task-id');
+    $.ajax({
+        method: 'DELETE',
+        url: `/tasks/${id}`
+    }).then(function (taskList) {
+        getTasksFromServer(taskList);
+    }).catch(function (serverError) {
+        const errorMessage = `Could not delete TO-DO task. Server error: ${serverError}`;
+        console.log(errorMessage);
+        alert(errorMessage);
+    });
 }
 
 // Request the current list of all TO-DO tasks from the server via GET

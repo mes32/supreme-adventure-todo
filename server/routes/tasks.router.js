@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
     });
 });
 
-// Mark a task as completed in the database
+// Mark a task as completed in the database based on database id
 router.put('/:id', (req, res) => {
     const taskID = req.params.id;
     const sqlText = `
@@ -43,6 +43,21 @@ router.put('/:id', (req, res) => {
         res.sendStatus(200);
     }).catch(function (sqlError) {
         console.log(`SQL error in /tasks PUT: ${sqlError}`);
+        res.sendStatus(500);
+    });
+});
+
+// Delete a task in the database based on database id
+router.delete('/:id', (req, res) => {
+    const taskID = req.params.id;
+    const sqlText = `
+    DELETE FROM "Tasks"
+        WHERE "id" = $1;
+    `;
+    pool.query(sqlText, [taskID]).then(function (sqlResult) {
+        res.sendStatus(200);
+    }).catch(function (sqlError) {
+        console.log(`SQL error in /tasks DELETE: ${sqlError}`);
         res.sendStatus(500);
     });
 });
