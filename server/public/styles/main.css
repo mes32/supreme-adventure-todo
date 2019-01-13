@@ -1,19 +1,111 @@
-table {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 768px;
+  margin: 0 auto;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+
+  background-color: #d8d8d8;
+}
+
+header {
+  padding: 15px 0 15px 0;
+  background-color: #222222;
+  color: whitesmoke;
+}
+
+h1, h3 {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+
+div#inputs {
+  text-align: center;
+}
+
+input {
+  margin: 20px 0 20px 0;
+  padding: 2px;
+  width: 50%;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+
+  border-radius: 3px;
+  border: 2px solid #71BC78;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #222222;
+}
+
+table#task-table {
+  margin: 0 auto;
   border-collapse: collapse;
+  background-color: whitesmoke;
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #666666;
 }
 
 th, td {
-  padding: 5px 30px;
+  padding: 0.2rem 20px;
 }
 
 tr.completed {
-  background-color: mediumaquamarine;
+  background-color: #71BC78;
+  text-decoration: line-through;
+  /* font-style: italic; */
+  color: #dddddd;
 }
 
-.completed .mark-complete-button {
-  
+button {
+  border: none;
+  border-radius: 3px;
+  padding: 0.2rem 10px;
+
+  color: whitesmoke;
+  background-color: #222222;
+
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+button#add-new-task {
+  font-size: 1.2rem;
+  background-color: #71BC78;
+  border-radius: 5px;
+  padding: 0.2rem 25px;
+}
+
+button.mark-complete-button {
+  background-color: #666666;
+}
+
+button.delete-button {
+  background-color: darkred;
+}
+
+button:hover, button#add-new-task:hover {
+  background-color: #222222;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: #9dbea1;
+  color: #dddddd;
+}
+
+button:disabled:hover {
+  cursor: default;
 }

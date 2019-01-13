@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="vendors/jquery-3.3.1.js"></script>
     <!-- <link rel="stylesheet" href="vendors/bootstrap.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway:500,700" rel="stylesheet">
 
     <script src="scripts/client.js"></script>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -13,23 +14,28 @@
     <title>TO-DO List</title>
 </head>
 <body>
-    <h3>_Supreme_Adventure_</h3>
-    <h1>TO-DO List</h1>
-    <input type="text" id="new-task-description" />
-    <button id="add-new-task">Add Task</button>
-    <br />
-    <br />
-    <table>
-        <thead>
-            <tr>
-                <th>Task Descrition</th>
-                <th>Mark Complete</th>
-                <th>Delete Task</th>
-            </tr>
-        </thead>
-        <tbody id="task-list">
-            <!-- Tasks will append here -->
-        </tbody>
-    </table>
+    <header>
+        <h3>_Supreme_Adventure_</h3>
+        <h1>TO-DO List</h1>
+    </header>
+    <main>
+        <div id="inputs">
+            <input type="text" id="new-task-description" />
+            <button id="add-new-task">Add Task</button>
+        </div>
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Task Descrition</th>
+                    <th>Complete:</th>
+                    <th>Delete:</th>
+                </tr>
+            </thead>
+            <tbody id="task-list">
+                <!-- Tasks will append here -->
+            </tbody>
+        </table>
+        </secition>
+    </main>
 </body>
 </html>

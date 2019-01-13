@@ -14,7 +14,7 @@ VALUES
     ('Heat mash water to 155 °F'),
     ('Dough in'),
     ('Adjust water chemistry (if needed)'),
-    ('Wait for >= hour & a half'),
+    ('Wait ... >= 1 & 1/2 hrs'),
     ('Heat sparge water'),
     ('Begin the vorlaüf (sp?) (i.e. water recirculation process)');
 
