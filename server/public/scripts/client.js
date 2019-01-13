@@ -25,6 +25,7 @@ function addNewTask() {
             getTasksFromServer();
             $('#new-task-description').val('');
         }).catch(function(serverError) {
+            console.log(serverError);
             const errorMessage = `Could not add new TO-DO tasks. Server error: ${serverError}`;
             console.log(errorMessage);
             alert(errorMessage);
