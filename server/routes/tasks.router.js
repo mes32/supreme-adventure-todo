@@ -5,8 +5,9 @@ const pool = require('../modules/database.pool');
 // Returns all tasks currently in the database
 router.get('/', (req, res) => {
     const sqlText = `
-    SELECT "id", "description", "completed" FROM "Tasks"
-    LIMIT 100;
+    SELECT id, description, completed FROM "Tasks"
+        ORDER BY completed, insert_timestamp ASC
+        LIMIT 100;
     `;
     pool.query(sqlText).then(function (sqlResult) {
         res.send(sqlResult.rows);
