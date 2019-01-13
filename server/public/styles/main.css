@@ -1,4 +1,12 @@
-html, body {
+body {
+  background-color: gray;
+}
+
+main {
+  background-color: white;
+}
+
+/* html, body {
   margin: 0;
   padding: 0;
   width: 768px;
@@ -60,7 +68,6 @@ th, td {
 tr.completed {
   background-color: #71BC78;
   text-decoration: line-through;
-  /* font-style: italic; */
   color: #dddddd;
 }
 
@@ -108,4 +115,4 @@ button:disabled {
 
 button:disabled:hover {
   cursor: default;
-}
+} */
