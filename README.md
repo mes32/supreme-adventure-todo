@@ -36,3 +36,6 @@ npm start
 ## Evolution
 - **Version 0.0.0**
 ![Screen Shot](docs/images/sample-v0.0.0.png)
+
+- **Version 0.0.1**
+![Screen Shot](docs/images/sample-v0.0.1.png)
