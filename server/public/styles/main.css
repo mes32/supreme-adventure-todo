@@ -59,6 +59,9 @@ th, td {
 
 tr.completed {
   background-color: mediumaquamarine;
+  text-decoration: line-through;
+  /* font-style: italic; */
+  color: #dddddd;
 }
 
 button {
