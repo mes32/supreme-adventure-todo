@@ -24,9 +24,8 @@ function addNewTask() {
         }).then(function(responseStatus) {
             getTasksFromServer();
             $('#new-task-description').val('');
-        }).catch(function(serverError) {
-            console.log(serverError);
-            const errorMessage = `Could not add new TO-DO tasks. Server error: ${serverError}`;
+        }).catch(function() {
+            const errorMessage = 'Server error 500: Could not add a new TO-DO task.';
             console.log(errorMessage);
             alert(errorMessage);
         });
@@ -41,8 +40,8 @@ function markTaskComplete() {
         url: `/tasks/${id}`
     }).then(function (taskList) {
         getTasksFromServer(taskList);
-    }).catch(function (serverError) {
-        const errorMessage = `Could not mark TO-DO task as completed. Server error: ${serverError}`;
+    }).catch(function () {
+        const errorMessage = 'Server error 500: Could not mark TO-DO task as completed.';
         console.log(errorMessage);
         alert(errorMessage);
     });
@@ -56,8 +55,8 @@ function deleteTask() {
         url: `/tasks/${id}`
     }).then(function (taskList) {
         getTasksFromServer(taskList);
-    }).catch(function (serverError) {
-        const errorMessage = `Could not delete TO-DO task. Server error: ${serverError}`;
+    }).catch(function () {
+        const errorMessage = 'Server error 500: Could not delete TO-DO task';
         console.log(errorMessage);
         alert(errorMessage);
     });
@@ -70,8 +69,8 @@ function getTasksFromServer() {
         url: '/tasks'
     }).then(function(taskList) {
         displayTasks(taskList);
-    }).catch(function(serverError) {
-        const errorMessage = `Could not get TO-DO tasks. Server error: ${serverError}`;
+    }).catch(function() {
+        const errorMessage = 'Server error 500: Could not get TO-DO tasks.';
         console.log(errorMessage);
         alert(errorMessage);
     });
