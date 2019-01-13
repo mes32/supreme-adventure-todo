@@ -9,7 +9,7 @@ To-do list web application
 
 ## Requirements
 - Git
-- Fairly new web browser
+- Web browser
 - Node and npm
 - PostgreSQL command line utility
 - PostgreSQL GUI application (e.g. Postico)
@@ -35,7 +35,7 @@ npm start
 
 ## Evolution
 - **Version 0.0.0**
-![Screen Shot](docs/images/sample-v0.0.0.png)
+![Screenshot of version 0.0.0](docs/images/sample-v0.0.0.png)
 
 - **Version 0.0.1**
-![Screen Shot](docs/images/sample-v0.0.1.png)
+![Screenshot of version 0.0.1](docs/images/sample-v0.0.1.png)
