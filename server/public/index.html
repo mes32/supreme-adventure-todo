@@ -18,19 +18,24 @@
         <h3>_Supreme_Adventure_</h3>
         <h1>TO-DO List</h1>
     </header>
-    <input type="text" id="new-task-description" />
-    <button id="add-new-task">Add Task</button>
-    <table>
-        <thead>
-            <tr>
-                <th>Task Descrition</th>
-                <th>Mark Complete</th>
-                <th>Delete Task</th>
-            </tr>
-        </thead>
-        <tbody id="task-list">
-            <!-- Tasks will append here -->
-        </tbody>
-    </table>
+    <main>
+        <div id="inputs">
+            <input type="text" id="new-task-description" />
+            <button id="add-new-task">Add Task</button>
+        </div>
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Task Descrition</th>
+                    <th>Complete:</th>
+                    <th>Delete:</th>
+                </tr>
+            </thead>
+            <tbody id="task-list">
+                <!-- Tasks will append here -->
+            </tbody>
+        </table>
+        </secition>
+    </main>
 </body>
 </html>

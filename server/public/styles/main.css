@@ -6,6 +6,8 @@ html, body {
 
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
+
+  background-color: #d8d8d8;
 }
 
 header {
@@ -16,6 +18,10 @@ header {
 
 h1, h3 {
   font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+
+div#inputs {
   text-align: center;
 }
 
@@ -37,16 +43,18 @@ input:focus {
   border: 2px solid #222222;
 }
 
-table {
+table#task-table {
+  margin: 0 auto;
   border-collapse: collapse;
+  background-color: whitesmoke;
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #666666;
 }
 
 th, td {
-  padding: 5px 30px;
+  padding: 0.2rem 20px;
 }
 
 tr.completed {
@@ -54,10 +62,47 @@ tr.completed {
 }
 
 button {
+  border: none;
+  border-radius: 3px;
+  padding: 0.2rem 10px;
+
+  color: whitesmoke;
+  background-color: #222222;
+
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 500;
 }
 
 button#add-new-task {
   font-size: 1.2rem;
+  background-color: mediumaquamarine;
+  border-radius: 5px;
+  padding: 0.2rem 25px;
+}
+
+button.mark-complete-button {
+  background-color: #666666;
+}
+
+button.delete-button {
+  background-color: darkred;
+}
+
+button:hover, button#add-new-task:hover {
+  background-color: #222222;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: rgb(143, 199, 181);
+  color: #dddddd;
+}
+
+button:disabled:hover {
+  cursor: default;
 }
