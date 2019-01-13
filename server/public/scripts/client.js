@@ -49,16 +49,46 @@ function markTaskComplete() {
 
 // Request that the server delete a given TO-DO task
 function deleteTask() {
-    const id = $(this).parent().parent().data('task-id');
-    $.ajax({
-        method: 'DELETE',
-        url: `/tasks/${id}`
-    }).then(function (taskList) {
-        getTasksFromServer(taskList);
-    }).catch(function () {
-        const errorMessage = 'Server error 500: Could not delete TO-DO task';
-        console.log(errorMessage);
-        alert(errorMessage);
+    const $taskRow = $(this).parent().parent();
+    const id = $taskRow.data('task-id');
+    const description = $taskRow.find('.task-description').text();
+    
+    swal({
+        icon: 'warning',
+        title: 'Delete this task?',
+        text: `Description: ${description}`,
+        buttons: {
+            cancel: true,
+            deleteButton: {
+                text: "Delete!",
+                value: true,
+                closeModal: false,
+            }
+        },
+    })
+    .then((value) => {
+        if (value) {
+            console.log('delete confirmed');
+            $.ajax({
+                method: 'DELETE',
+                url: `/tasks/${id}`,
+            }).then(function (taskList) {
+                getTasksFromServer(taskList);
+                swal({
+                    icon: "success",
+                    title: 'Deleted',
+                    text: `Description: ${description}`,
+                });
+            }).catch(function () {
+                const errorMessage = `[Server Error 500] Could not delete: ${description}`;
+                console.log(errorMessage);
+                swal({
+                    icon: "error",
+                    title: 'Uh-Oh 😱',
+                    text: errorMessage,
+                });
+            });
+        }
     });
 }
 
@@ -82,7 +112,7 @@ function displayTasks(taskList) {
     for (let task of taskList) {
         const $taskRow = $(`
         <tr>
-            <td>${task.description}</td>
+            <td class="task-description">${task.description}</td>
             <td><button class="mark-complete-button">complete</button></td>
             <td><button class="delete-button">delete</button></td>
         </tr>
