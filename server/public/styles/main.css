@@ -35,7 +35,7 @@ input {
   font-size: 1.2rem;
 
   border-radius: 3px;
-  border: 2px solid mediumaquamarine;
+  border: 2px solid #71BC78;
 }
 
 input:focus {
@@ -58,7 +58,7 @@ th, td {
 }
 
 tr.completed {
-  background-color: mediumaquamarine;
+  background-color: #71BC78;
   text-decoration: line-through;
   /* font-style: italic; */
   color: #dddddd;
@@ -79,7 +79,7 @@ button {
 
 button#add-new-task {
   font-size: 1.2rem;
-  background-color: mediumaquamarine;
+  background-color: #71BC78;
   border-radius: 5px;
   padding: 0.2rem 25px;
 }
@@ -102,7 +102,7 @@ button:focus {
 }
 
 button:disabled {
-  background-color: rgb(143, 199, 181);
+  background-color: #9dbea1;
   color: #dddddd;
 }
 
