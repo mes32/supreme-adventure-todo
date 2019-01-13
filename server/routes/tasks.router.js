@@ -5,8 +5,9 @@ const pool = require('../modules/database.pool');
 // Returns all tasks currently in the database
 router.get('/', (req, res) => {
     const sqlText = `
-    SELECT "id", "description", "completed" FROM "Tasks"
-    LIMIT 100;
+    SELECT id, description, completed FROM TodoTasks
+        ORDER BY completed, created_timestamp ASC
+        LIMIT 100;
     `;
     pool.query(sqlText).then(function (sqlResult) {
         res.send(sqlResult.rows);
@@ -20,8 +21,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const description = req.body.description;
     const sqlText = `
-    INSERT INTO "Tasks"
-        ("description") VALUES ($1);
+    INSERT INTO TodoTasks
+        (description) VALUES ($1);
     `;
     pool.query(sqlText, [description]).then(function (sqlResult) {
         res.sendStatus(201);
@@ -35,9 +36,9 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     const taskID = req.params.id;
     const sqlText = `
-    UPDATE "Tasks"
-        SET "completed" = TRUE
-        WHERE "id" = $1;
+    UPDATE TodoTasks
+        SET completed = TRUE
+        WHERE id = $1;
     `;
     pool.query(sqlText, [taskID]).then(function (sqlResult) {
         res.sendStatus(200);
@@ -51,8 +52,8 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     const taskID = req.params.id;
     const sqlText = `
-    DELETE FROM "Tasks"
-        WHERE "id" = $1;
+    DELETE FROM TodoTasks
+        WHERE id = $1;
     `;
     pool.query(sqlText, [taskID]).then(function (sqlResult) {
         res.sendStatus(200);
