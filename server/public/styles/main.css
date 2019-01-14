@@ -6,6 +6,42 @@ main {
   background-color: white;
 }
 
+.jumbotron {
+  color: white;
+  background-color: #3f8175;
+  /* background: radial-gradient(
+    circle at 30% -20%,
+    #d6e3ab 17%, 
+    #75a889 34%,
+    #3f8175 51%,
+    #333568 68%,
+    #743c95 85%,
+    #b765c7 100%
+  ); */
+
+  background: radial-gradient(
+    circle at 30% -20%,
+    #d6e3ab 5%, 
+    #75a889 17%,
+    #3f8175 45%,
+    #333568 80%,
+    #743c95 100%
+  );
+
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  padding: 1.6rem 0 1.6rem 0;
+  border-radius: 0;
+}
+
+.jumbotron h1 {
+  font-size: 3.4rem;
+}
+
+.jumbotron h3 {
+  font-size: 1.8rem;
+}
+
 /* html, body {
   margin: 0;
   padding: 0;
