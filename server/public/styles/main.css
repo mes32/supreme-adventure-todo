@@ -1,111 +1,77 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 768px;
-  margin: 0 auto;
-
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
-
-  background-color: #d8d8d8;
+body {
+  background-color: gray;
 }
 
-header {
-  padding: 15px 0 15px 0;
-  background-color: #222222;
-  color: whitesmoke;
+main {
+  background-color: white;
+  box-shadow: 0px 0px 60px 10px rgba(0,0,0,0.4);
 }
 
-h1, h3 {
+.table {
+  margin-bottom: 0;
+}
+
+.table th, .table td { 
+  border-left: none !important; 
+  border-right: none !important; 
+}
+
+.jumbotron {
+  color: white;
+  background-color: #3f8175;
+  background: radial-gradient(
+    circle at 30% -20%,
+    #d6e3ab 5%, 
+    #75a889 17%,
+    #3f8175 45%,
+    #333568 80%,
+    #743c95 100%
+  );
+
+  text-align: center;
   font-family: 'Permanent Marker', cursive;
-  text-align: center;
+  padding: 1.6rem 0 1.6rem 0;
+  border-radius: 0;
 }
 
-div#inputs {
-  text-align: center;
+.jumbotron h1 {
+  font-size: 3.4rem;
 }
 
-input {
-  margin: 20px 0 20px 0;
-  padding: 2px;
-  width: 50%;
-
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
-  font-size: 1.2rem;
-
-  border-radius: 3px;
-  border: 2px solid #71BC78;
+.jumbotron h3 {
+  font-size: 1.8rem;
 }
 
-input:focus {
-  outline: none;
-  border: 2px solid #222222;
+#inputs {
+  padding: 0 10px 0 10px;
+  margin-bottom: 2rem;
 }
 
-table#task-table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  background-color: whitesmoke;
+#inputs .btn {
+  font-style: italic;
 }
 
-table, th, td {
-  border: 1px solid #666666;
-}
-
-th, td {
-  padding: 0.2rem 20px;
+.form-control:focus {
+  border-color: #333568;
 }
 
 tr.completed {
-  background-color: #71BC78;
-  text-decoration: line-through;
-  /* font-style: italic; */
-  color: #dddddd;
-}
-
-button {
-  border: none;
-  border-radius: 3px;
-  padding: 0.2rem 10px;
-
-  color: whitesmoke;
-  background-color: #222222;
-
-  font-family: 'Raleway', sans-serif;
+  background-color: #75a889;
+  background: linear-gradient(
+    90deg,
+    #75a889 10%,
+    #3f8175 50%,
+    #333568 80%,
+    #743c95 100%
+  );
   font-style: italic;
-  font-weight: 500;
+  color: #e0e4d5;
 }
 
-button#add-new-task {
-  font-size: 1.2rem;
-  background-color: #71BC78;
-  border-radius: 5px;
-  padding: 0.2rem 25px;
+.completed .mark-complete-button {
+  visibility: hidden;
 }
 
-button.mark-complete-button {
-  background-color: #666666;
-}
-
-button.delete-button {
-  background-color: darkred;
-}
-
-button:hover, button#add-new-task:hover {
-  background-color: #222222;
-  cursor: pointer;
-}
-
-button:focus {
-  outline: none;
-}
-
-button:disabled {
-  background-color: #9dbea1;
-  color: #dddddd;
-}
-
-button:disabled:hover {
-  cursor: default;
+.swal-button--confirm {
+  background-color: #743c95;
 }

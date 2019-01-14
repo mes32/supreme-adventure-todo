@@ -84,8 +84,8 @@ function displayTasks(taskList) {
         const $taskRow = $(`
         <tr>
             <td class="task-description">${task.description}</td>
-            <td><button class="mark-complete-button">complete</button></td>
-            <td><button class="delete-button">delete</button></td>
+            <td><button class="btn btn-secondary btn-sm mark-complete-button">✓</button></td>
+            <td><button class="btn btn-danger btn-sm delete-button">✗</button></td>
         </tr>
         `);
         $taskRow.data('task-id', task.id);
@@ -118,10 +118,10 @@ function deleteTaskDialog(task) {
     const dialogFunction = swal({
         icon: 'warning',
         title: 'Delete this task?',
-        text: `Description: ${task.description}`,
+        text: `"${task.description}"`,
         buttons: {
             cancel: true,
-            deleteButton: {
+            confirm: {
                 text: "Delete!",
                 value: true,
                 closeModal: false,
