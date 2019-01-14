@@ -118,10 +118,10 @@ function deleteTaskDialog(task) {
     const dialogFunction = swal({
         icon: 'warning',
         title: 'Delete this task?',
-        text: `Description: ${task.description}`,
+        text: `"${task.description}"`,
         buttons: {
             cancel: true,
-            deleteButton: {
+            confirm: {
                 text: "Delete!",
                 value: true,
                 closeModal: false,
