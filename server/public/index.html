@@ -15,27 +15,27 @@
     <title>TO-DO List</title>
 </head>
 <body>
-    <!-- <div class="container"> -->
-        <div class="row">
-            <main class="col-md-10 offset-md-1">
-                <header class="jumbotron">
-                    <h3>_Supreme_Adventure_</h3>
-                    <h1>TO-DO List</h1>
-                </header>
-                <div>
-                    <div id="inputs">
-                        <input type="text" id="new-task-description" />
-                        <button id="add-new-task" class="btn btn-primary">Add Task</button>
+    <div class="row no-gutters">
+        <main class="col-md-10 offset-md-1">
+            <header class="jumbotron">
+                <h3>_Supreme_Adventure_</h3>
+                <h1>TO-DO List</h1>
+            </header>
+            <div>
+                <div id="inputs" class="input-group">
+                    <input id="new-task-description" type="text" class="form-control" placeholder="Task Description" aria-label="Describe task to add" />
+                    <div class="input-group-append">
+                        <button id="add-new-task" class="btn btn-secondary" type="button">Add Task</button>
                     </div>
-                    <table id="task-table" class="table table-hover">
-                        <tbody id="task-list">
-                            <!-- Tasks will append here -->
-                        </tbody>
-                    </table>
-                    </secition>
                 </div>
-            </main>
-        </div> <!-- / class="row" -->
-    <!-- </div> / class="container" -->
+                <table id="task-table" class="table table-hover">
+                    <tbody id="task-list">
+                        <!-- Tasks will append here -->
+                    </tbody>
+                </table>
+                </secition>
+            </div>
+        </main>
+    </div> <!-- / class="row" -->
 </body>
 </html>
