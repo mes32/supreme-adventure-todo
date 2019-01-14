@@ -6,6 +6,11 @@ main {
   background-color: white;
 }
 
+.table th, .table td { 
+  border-left: none !important; 
+  border-right: none !important; 
+}
+
 .jumbotron {
   color: white;
   background-color: #3f8175;
@@ -42,8 +47,25 @@ main {
   font-size: 1.8rem;
 }
 
-.btn {
+.btn-primary {
   font-style: italic;
+}
+
+tr.completed {
+  background-color: #75a889;
+  background: linear-gradient(
+    90deg,
+    #75a889 10%,
+    #3f8175 50%,
+    #333568 80%,
+    #743c95 100%
+  );
+  font-style: italic;
+  color: #e0e4d5;
+}
+
+.completed .mark-complete-button {
+  visibility: hidden;
 }
 
 /* html, body {
